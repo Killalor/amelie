@@ -11,8 +11,8 @@
  * @return string/null wether the favicon is defined or not.
  */
 function get_title($title) {
-  global $anax;
-  return $title . (isset($anax['title_append']) ? $anax['title_append'] : null);
+  global $amelie;
+  return $title . (isset($amelie['title_append']) ? $amelie['title_append'] : null);
 }
 
 

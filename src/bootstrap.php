@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrapping functions, essential and needed for Anax to work together with some common helpers. 
+ * Bootstrapping functions, essential and needed for Amelie to work together with some common helpers. 
  *
  */
 
@@ -9,7 +9,7 @@
  *
  */
 function myExceptionHandler($exception) {
-  echo "Anax: Uncaught exception: <p>" . $exception->getMessage() . "</p><pre>" . $exception->getTraceAsString(), "</pre>";
+  echo "Amelie: Uncaught exception: <p>" . $exception->getMessage() . "</p><pre>" . $exception->getTraceAsString(), "</pre>";
 }
 set_exception_handler('myExceptionHandler');
 
@@ -19,7 +19,7 @@ set_exception_handler('myExceptionHandler');
  *
  */
 function myAutoloader($class) {
-  $path = ANAX_INSTALL_PATH . "/src/{$class}/{$class}.php";
+  $path = AMELIE_INSTALL_PATH . "/src/{$class}/{$class}.php";
   if(is_file($path)) {
     include($path);
   }
@@ -28,3 +28,13 @@ function myAutoloader($class) {
   }
 }
 spl_autoload_register('myAutoloader');
+
+
+/**
+ * Code sequens for trubble shooting.
+ *
+ * 
+ */
+function dump($a) {
+  echo '<pre>' . print_r($a, 1) . '</pre>';
+}

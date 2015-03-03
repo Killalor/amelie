@@ -1,6 +1,6 @@
 <?php
 /**
- * Config-file for Anax. Change settings here to affect installation.
+ * Config-file for Amelie. Change settings here to affect installation.
  *
  */
 
@@ -14,18 +14,18 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
 
 
 /**
- * Define Anax paths.
+ * Define Amelie paths.
  *
  */
-define('ANAX_INSTALL_PATH', __DIR__ . '/..');
-define('ANAX_THEME_PATH', ANAX_INSTALL_PATH . '/theme/render.php');
+define('AMELIE_INSTALL_PATH', __DIR__ . '/..');
+define('AMELIE_THEME_PATH', AMELIE_INSTALL_PATH . '/theme/render.php');
 
 
 /**
  * Include bootstrapping functions.
  *
  */
-include(ANAX_INSTALL_PATH . '/src/bootstrap.php');
+include(AMELIE_INSTALL_PATH . '/src/bootstrap.php');
 
 
 /**
@@ -37,26 +37,26 @@ session_start();
 
 
 /**
- * Create the Anax variable.
+ * Create the Amelie variable.
  *
  */
-$anax = array();
+$amelie = array();
 
 
 /**
  * Site wide settings.
  *
  */
-$anax['lang']         = 'sv';
-$anax['title_append'] = ' | Anax en webbtemplate';
+$amelie['lang']         = 'sv';
+$amelie['title_append'] = ' | Amelie en webbtemplate';
 
-$anax['header'] = <<<EOD
+$amelie['header'] = <<<EOD
 <img class='sitelogo' src='img/anax.png' alt='Anax Logo'/>
 <span class='sitetitle'>Anax webbtemplate</span>
 <span class='siteslogan'>Återanvändbara moduler för webbutveckling med PHP</span>
 EOD;
 
-$anax['footer'] = <<<EOD
+$amelie['footer'] = <<<EOD
 <footer><span class='sitefooter'>Copyright (c) Mikael Roos (me@mikaelroos.se) | <a href='https://github.com/mosbth/Anax-base'>Anax på GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></span></footer>
 EOD;
 
@@ -66,9 +66,9 @@ EOD;
  * Theme related settings.
  *
  */
-//$anax['stylesheet'] = 'css/style.css';
-$anax['stylesheets'] = array('css/style.css');
-$anax['favicon']    = 'favicon.ico';
+//$amelie['stylesheet'] = 'css/style.css';
+$amelie['stylesheets'] = array('css/style.css');
+$amelie['favicon']    = 'favicon.ico';
 
 
 
@@ -76,11 +76,11 @@ $anax['favicon']    = 'favicon.ico';
  * Settings for JavaScript.
  *
  */
-$anax['modernizr'] = 'js/modernizr.js';
-$anax['jquery'] = '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js';
-//$anax['jquery'] = null; // To disable jQuery
-$anax['javascript_include'] = array();
-//$anax['javascript_include'] = array('js/main.js'); // To add extra javascript files
+$amelie['modernizr'] = 'js/modernizr.js';
+$amelie['jquery'] = '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js';
+//$amelie['jquery'] = null; // To disable jQuery
+$amelie['javascript_include'] = array();
+//$amelie['javascript_include'] = array('js/main.js'); // To add extra javascript files
 
 
 
@@ -88,4 +88,4 @@ $anax['javascript_include'] = array();
  * Google analytics.
  *
  */
-$anax['google_analytics'] = 'UA-22093351-1'; // Set to null to disable google analytics
+$amelie['google_analytics'] = 'UA-22093351-1'; // Set to null to disable google analytics
