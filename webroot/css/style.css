@@ -1,4 +1,9 @@
 /**
+ * Import stylesheet
+ */
+@import url(links_bar.css);
+
+/**
  * General elements
  */
 body {

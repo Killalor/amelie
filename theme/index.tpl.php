@@ -12,6 +12,7 @@
 <body>
   <div id='wrapper'>
     <div id='header'><?=$header?></div>
+    <?php if(isset($navmenu)): ?><div id='navmenu'><?=get_navMenu($navmenu)?></div><?php endif; ?>
     <div id='main'><?=$main?></div>
     <div id='footer'><?=$footer?></div>
   </div>

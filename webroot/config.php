@@ -89,3 +89,29 @@ $amelie['javascript_include'] = array();
  *
  */
 $amelie['google_analytics'] = 'UA-22093351-1'; // Set to null to disable google analytics
+
+
+/**
+ * Navigation menu
+ *
+ */
+ //$anax['navbar'] = null; // If menu not wanted
+
+$amelie['navmenu'] = array(
+	'class' => 'nm-standard',
+	'items' => array (
+		'hello'         => array('text'=>'Hello',   'url'=>'hello.php',   	'title' => 'Hello this is...'),
+    	//'about' 		=> array('text'=>'About', 	'url'=>'about.php',		'title' => 'About'), // Activate for more choice's
+    	//'source'    	=> array('text'=>'Source',  'url'=>'source.php',	'title' => 'Source code'), // Activate for more choice's
+    ),
+    'callback_selected' => function ($url) {
+    	if(basename($_SERVER['SCRIPT_FILENAME']) == $url) {
+    		return true;
+    	}
+    }
+);
+
+
+    	
+    	
+    	
