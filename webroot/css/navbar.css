@@ -1,0 +1,41 @@
+/** --------------------------------------------------------------
+ * navmenu
+ *
+ */
+ul.nm-standard {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background:#669999; /** background for menu **/
+}
+
+ul.nm-standard li {
+  padding: 0 0 0 1em;
+  margin: 0;
+  display: inline;
+}
+
+ul.nm-standard li:first-child {
+  padding-left: 0;
+  background:#FFF; /* Filling for button */
+}
+
+ul.nm-standard li.selected a {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  
+}    
+
+ul.nm-standard a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+}  
+
+ul.nm-standard a:hover {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  text-decoration: none;
+}
